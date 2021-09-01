@@ -1,30 +1,77 @@
 .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99;
+    padding: 3rem 0;
     height: 100vh;
     width: 100vw;
     background-color: rgba(0 0 0 / 0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 0;
     pointer-events: none;
     transition: 0.5s all;
+
+    @include respond(phone) {
+        padding: 0;
+    }
 
     &.active {
         opacity: 1;
         pointer-events: all;
     }
 
+    &__wrapper {
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 100%;
+        min-height: 100%;
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+
     &__content {
+        flex-shrink: 0;
+        flex-grow: 0;
+        overflow: visible;
+        margin: auto;
         position: relative;
         border-radius: 3rem;
         background-color: #fff;
-        width: 55.2rem;
+        max-width: 55.2rem;
+        width: 100%;
+
+        @include respond(tab-port) {
+            max-width: 45.3rem;
+            width: 100%;
+        }
+
         transform: scale(0.5);
         transition: 0.4s all;
         padding: 3.2rem;
+
+        @include respond(phone) {
+            max-width: 60.3rem;
+            width: 100%;
+            padding: 1.6rem;
+            border-radius: 0;
+            min-height: 100vh;
+        }
 
         &.active {
             transform: scale(1);
@@ -39,6 +86,14 @@
         right: 2.7rem;
         width: 1.8rem;
         height: 1.8rem;
+
+        @include respond(phone) {
+            background-image: url("../../images/smallCross.png");
+            top: 2.2rem;
+            right: 2.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
 
     &__title {
@@ -46,6 +101,10 @@
         color: #000;
         font-size: 2.8rem;
         line-height: 4rem;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
     }
 
     &__text {
@@ -56,6 +115,10 @@
         margin-top: 1.6rem;
         max-width: 42.5rem;
         width: 100%;
+
+        @include respond(phone) {
+            font-size: 1.2rem;
+        }
     }
 
     &__labelRub {
@@ -65,6 +128,10 @@
         color: #000;
         line-height: 2.4rem;
         margin: 2.4rem 0 .8rem;
+
+        @include respond(phone) {
+            margin: 2.4rem 0 1.6rem;
+        }
     }
 
     &__inputRub {
@@ -145,6 +212,10 @@
         display: flex;
         align-items: center;
         margin: 2.4rem 0 4rem;
+
+        @include respond(phone) {
+            display: block;
+        }
     }
 
     &__decreaseText {
@@ -153,6 +224,12 @@
         line-height: 2.4rem;
         color: #000;
         margin-right: 3.2rem;
+    }
+
+    &__decreaseBlock {
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
     }
 
     &__decreaseBtn {
@@ -198,6 +275,11 @@
         font-size: 1.6rem;
         line-height: 2.4rem;
         box-shadow: 0 0 2.4rem rgba(234, 0, 41, 0.33);
+
+        @include respond(phone) {
+            height: 4rem;
+            font-size: 1.4rem;
+        }
 
         &:hover,
         &:active {
@@ -281,6 +363,5 @@
             background-color: #BEC5CC;
             background-image: url("../../images/checked.png");
         }
-
     }
 }
