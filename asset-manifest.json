@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/outDigit/static/css/main.726e77ed.chunk.css",
+    "main.js": "/outDigit/static/js/main.be1b1320.chunk.js",
+    "main.js.map": "/outDigit/static/js/main.be1b1320.chunk.js.map",
+    "runtime-main.js": "/outDigit/static/js/runtime-main.8d0c8e4c.js",
+    "runtime-main.js.map": "/outDigit/static/js/runtime-main.8d0c8e4c.js.map",
+    "static/js/2.4b2f841d.chunk.js": "/outDigit/static/js/2.4b2f841d.chunk.js",
+    "static/js/2.4b2f841d.chunk.js.map": "/outDigit/static/js/2.4b2f841d.chunk.js.map",
+    "index.html": "/outDigit/index.html",
+    "static/css/main.726e77ed.chunk.css.map": "/outDigit/static/css/main.726e77ed.chunk.css.map",
+    "static/js/2.4b2f841d.chunk.js.LICENSE.txt": "/outDigit/static/js/2.4b2f841d.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/outDigit/static/media/LabGrotesqueMono.e3564b10.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d0c8e4c.js",
+    "static/js/2.4b2f841d.chunk.js",
+    "static/css/main.726e77ed.chunk.css",
+    "static/js/main.be1b1320.chunk.js"
+  ]
+}
